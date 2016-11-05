@@ -1,6 +1,6 @@
-import { Component } from 'react'
+const { Component } = require('react')
 
-export default class KeyDown extends Component {
+module.exports = class KeyDown extends Component {
   componentDidMount() {
     document.addEventListener('keydown', (event) => {
       if (event.key === this.props.when) {

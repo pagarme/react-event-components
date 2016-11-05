@@ -1,5 +1,5 @@
-import KeyUp from './KeyUp'
-import KeyDown from './KeyDown'
+const KeyUp = require('./KeyUp')
+const KeyDown = require('./KeyDown')
 
-export { KeyUp, KeyDown }
+module.exports = { KeyUp, KeyDown }
 
