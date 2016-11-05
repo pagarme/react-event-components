@@ -1,0 +1,21 @@
+{
+  "name": "react-event-components",
+  "homepage": "http://pagarme.github.io/react-event-components",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/react-event-components/index.js",
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d ./build"
+  }
+}
