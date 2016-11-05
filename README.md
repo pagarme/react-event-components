@@ -1,7 +1,7 @@
 # React Event Components
 
-This set of components were designed as an idiomatic
-way of workign with global, raw keyboard input in React.
+A set of components designed as an idiomatic way of working
+with global, raw input (keyboard, mouse, touch, etc) in React.
 
 ## Usage
 
@@ -66,3 +66,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
