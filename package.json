@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "src/react-event-components/index.js",
   "devDependencies": {
+    "gh-pages": "0.11.0",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
