@@ -28,7 +28,7 @@ class App extends Component {
 
     return (
       <div style={{ transform: `translate(${x}px, ${y}px)` }}>
-      	<p>Try WASD</p>
+      	<p>Try WASD or QEZC</p>
         <KeyDown when="w" do={() => this.setState({ y: y - 10 })} />
         <KeyDown when="a" do={() => this.setState({ x: x - 10 })} />
         <KeyDown when="s" do={() => this.setState({ y: y + 10 })} />
