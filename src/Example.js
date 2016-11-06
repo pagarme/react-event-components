@@ -23,11 +23,11 @@ export default class Example extends Component {
       <div>
         <p>Total time: {Math.floor(this.state.totalTime * 100)/100}</p>
 
-        <h1 style={{ 
+        <h1 style={{
           transform: `translate(${x}px, ${y}px)`,
-          color: this.state.color 
+          color: this.state.color
         }}>
-          Try WASD
+          Try WASD or QEZC
         </h1>
 
         <KeyDown when="w" do={() => this.move({ y: y - 10 })} />
@@ -40,14 +40,14 @@ export default class Example extends Component {
         <KeyDown when="c" do={() => this.move({ x: x + 10, y: y + 10})} />
 
         <Every frame do={ (dt) => {
-          this.setState({ totalTime: this.state.totalTime + dt }) 
+          this.setState({ totalTime: this.state.totalTime + dt })
         }} />
 
         <Every s="1" ms="500" do={() => {
           const randomHex = () => Math.round(Math.random() * 255)
-          const randomColor = `rgb(${randomHex()},${randomHex()},${randomHex()})` 
-          this.setState({ 
-            color: randomColor 
+          const randomColor = `rgb(${randomHex()},${randomHex()},${randomHex()})`
+          this.setState({
+            color: randomColor
           })
         }} />
 
