@@ -33,10 +33,10 @@ class App extends Component {
         <KeyDown when="a" do={() => this.setState({ x: x - 10 })} />
         <KeyDown when="s" do={() => this.setState({ y: y + 10 })} />
         <KeyDown when="d" do={() => this.setState({ x: x + 10 })} />
-        <KeyDown when="q" do={() => this.move({ x: x - 10, y: y - 10})} />
-        <KeyDown when="e" do={() => this.move({ x: x + 10, y: y - 10})} />
-        <KeyDown when="z" do={() => this.move({ x: x - 10, y: y + 10})} />
-        <KeyDown when="c" do={() => this.move({ x: x + 10, y: y + 10})} />
+        <KeyDown when="q" do={() => this.setState({ x: x - 10, y: y - 10})} />
+        <KeyDown when="e" do={() => this.setState({ x: x + 10, y: y - 10})} />
+        <KeyDown when="z" do={() => this.setState({ x: x - 10, y: y + 10})} />
+        <KeyDown when="c" do={() => this.setState({ x: x + 10, y: y + 10})} />
       </div>
     )
   }
