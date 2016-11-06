@@ -3,6 +3,10 @@
 A set of components designed as an idiomatic way of working
 with global, raw input (keyboard, mouse, touch, etc) in React.
 
+## Example
+
+A live demo can be found at https://pagarme.github.io/react-event-components
+
 ## Usage
 
 ```javascript
