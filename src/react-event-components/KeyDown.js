@@ -1,18 +1,31 @@
 const { Component } = require('react')
 
 module.exports = class KeyDown extends Component {
-  componentDidMount() {
-    document.addEventListener('keydown', (event) => {
-      if (event.key === this.props.when) {
-        this.props.do()
-      }
-    })
+  constructor() {
+    super()
+    this.listen = this.listen.bind(this)
   }
+
+  listen(event) {
+    if (event.key === this.props.when) {
+      this.props.do()
+      console.log(event.key)
+    }
+  }
+  
+  componentDidMount() {
+    document.addEventListener('keydown', this.listen)
+  }
+  
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.listen)
+  }
+  
   shouldComponentUpdate() {
     return false
   }
+  
   render() {
     return null
   }
 }
-
