@@ -15,15 +15,15 @@ module.exports = class KeyUp extends Component {
   componentDidMount() {
     document.addEventListener('keyup', this.listen)
   }
-  
+
   componentWillUnmount() {
     document.removeEventListener('keyup', this.listen)
   }
-  
+
   shouldComponentUpdate() {
     return false
   }
-  
+
   render() {
     return null
   }

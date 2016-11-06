@@ -11,19 +11,19 @@ module.exports = class KeyDown extends Component {
       this.props.do()
     }
   }
-  
+
   componentDidMount() {
     document.addEventListener('keydown', this.listen)
   }
-  
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.listen)
   }
-  
+
   shouldComponentUpdate() {
     return false
   }
-  
+
   render() {
     return null
   }
