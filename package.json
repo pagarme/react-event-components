@@ -2,7 +2,7 @@
   "name": "react-event-components",
   "homepage": "http://pagarme.github.io/react-event-components",
   "repository": "pagarme/react-event-components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "main": "src/react-event-components/index.js",
   "devDependencies": {
