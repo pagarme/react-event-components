@@ -9,7 +9,6 @@ module.exports = class KeyDown extends Component {
   listen(event) {
     if (event.key === this.props.when) {
       this.props.do()
-      console.log(event.key)
     }
   }
   
