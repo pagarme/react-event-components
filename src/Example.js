@@ -30,20 +30,20 @@ export default class Example extends Component {
           Try WASD or QEZC
         </h1>
 
-        <KeyDown when="w" do={() => this.move({ y: y - 10 })} />
-        <KeyDown when="a" do={() => this.move({ x: x - 10 })} />
-        <KeyDown when="s" do={() => this.move({ y: y + 10 })} />
-        <KeyDown when="d" do={() => this.move({ x: x + 10 })} />
-        <KeyDown when="q" do={() => this.move({ x: x - 10, y: y - 10})} />
-        <KeyDown when="e" do={() => this.move({ x: x + 10, y: y - 10})} />
-        <KeyDown when="z" do={() => this.move({ x: x - 10, y: y + 10})} />
-        <KeyDown when="c" do={() => this.move({ x: x + 10, y: y + 10})} />
+        <KeyDown when="w" run={() => this.move({ y: y - 10 })} />
+        <KeyDown when="a" run={() => this.move({ x: x - 10 })} />
+        <KeyDown when="s" run={() => this.move({ y: y + 10 })} />
+        <KeyDown when="d" run={() => this.move({ x: x + 10 })} />
+        <KeyDown when="q" run={() => this.move({ x: x - 10, y: y - 10})} />
+        <KeyDown when="e" run={() => this.move({ x: x + 10, y: y - 10})} />
+        <KeyDown when="z" run={() => this.move({ x: x - 10, y: y + 10})} />
+        <KeyDown when="c" run={() => this.move({ x: x + 10, y: y + 10})} />
 
-        <Every frame do={ (dt) => {
+        <Every frame run={ (dt) => {
           this.setState({ totalTime: this.state.totalTime + dt })
         }} />
 
-        <Every s="1" ms="500" do={() => {
+        <Every s="1" ms="500" run={() => {
           const randomHex = () => Math.round(Math.random() * 255)
           const randomColor = `rgb(${randomHex()},${randomHex()},${randomHex()})`
           this.setState({

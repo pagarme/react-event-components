@@ -9,7 +9,7 @@ class KeyEvent extends Component {
   listen(event) {
     if (event.key === this.props.when) {
       console.log(this.props.trigger)
-      this.props.do()
+      this.props.run()
     }
   }
 
@@ -44,7 +44,7 @@ KeyEvent.propTypes = {
    * Triggered when the key is pressed
    * @type {Function}
    */
-  do: PropTypes.func.isRequired
+  run: PropTypes.func.isRequired
 }
 
 module.exports = KeyEvent
