@@ -1,33 +1,8 @@
-const { Component, PropTypes } = require('react')
+const React = require('react')
+const { PropTypes } = React
+const KeyEvent = require('./KeyEvent')
 
-class KeyUp extends Component {
-  constructor() {
-    super()
-    this.listen = this.listen.bind(this)
-  }
-
-  listen(event) {
-    if (event.key === this.props.when) {
-      this.props.do()
-    }
-  }
-
-  componentDidMount() {
-    document.addEventListener('keyup', this.listen)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keyup', this.listen)
-  }
-
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    return null
-  }
-}
+const KeyUp = (props) => <KeyEvent trigger="keyup" {...props} />
 
 KeyUp.propTypes = {
   /**
@@ -36,7 +11,7 @@ KeyUp.propTypes = {
    */
   when: PropTypes.string.isRequired,
   /**
-   * Triggered when the key is released
+   * Triggered when the key is pressed
    * @type {Function}
    */
   do: PropTypes.func.isRequired
