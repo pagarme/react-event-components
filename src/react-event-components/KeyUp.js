@@ -1,6 +1,6 @@
-const { Component } = require('react')
+const { Component, PropTypes } = require('react')
 
-module.exports = class KeyUp extends Component {
+class KeyUp extends Component {
   constructor() {
     super()
     this.listen = this.listen.bind(this)
@@ -28,3 +28,18 @@ module.exports = class KeyUp extends Component {
     return null
   }
 }
+
+KeyUp.propTypes = {
+  /**
+   * A keyboard key to trigger the callback
+   * @type {String}
+   */
+  when: PropTypes.string.isRequired,
+  /**
+   * Triggered when the key is released
+   * @type {Function}
+   */
+  do: PropTypes.func.isRequired
+}
+
+module.exports = KeyUp
