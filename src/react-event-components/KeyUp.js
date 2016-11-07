@@ -14,7 +14,7 @@ KeyUp.propTypes = {
    * Triggered when the key is pressed
    * @type {Function}
    */
-  do: PropTypes.func.isRequired
+  run: PropTypes.func.isRequired
 }
 
 module.exports = KeyUp

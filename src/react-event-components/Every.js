@@ -16,7 +16,7 @@ module.exports = class Every extends Component {
     const now = performance.now()
     const dt = now - this.state.lastFrame
     this.setState({ lastFrame: now })
-    this.props.do(dt/1000)
+    this.props.run(dt/1000)
     window.requestAnimationFrame(this.handleEveryFrame)
   }
 
@@ -26,7 +26,7 @@ module.exports = class Every extends Component {
       return
     }
     const interval = ((Number(this.props.s) || 0) * 1000) + (Number(this.props.ms) || 0)
-    this.setState({ intervalId: window.setInterval(this.props.do, interval) })
+    this.setState({ intervalId: window.setInterval(this.props.run, interval) })
   }
 
   componentWillUnmount() {
