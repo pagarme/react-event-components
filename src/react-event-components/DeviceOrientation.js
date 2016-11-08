@@ -1,10 +1,6 @@
 const { Component, PropTypes } = require('react')
 
 class DeviceOrientation extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     window.addEventListener('deviceorientation', this.props.do)
   }
