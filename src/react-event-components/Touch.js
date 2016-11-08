@@ -2,17 +2,38 @@ const React = require('react')
 const { Component, PropTypes } = require('react')
 
 class Touch extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.target = this.props.children ? this.refs.target : document
-    this.target.addEventListener(`touch${this.props.when}`, this.props.do)
+
+    if (Array.isArray(this.props.when)) {
+      this.props.when.forEach((when) => {
+        this.addEvent(when)
+      })
+
+      return
+    }
+
+    this.addEvent(this.props.when)
   }
 
   componentWillUnmount() {
-    this.target.removeEventListener(`touch${this.props.when}`, this.props.do)
+    if (Array.isArray(this.props.when)) {
+      this.props.when.forEach((when) => {
+        this.removeEvent(when)
+      })
+
+      return
+    }
+
+    this.removeEvent(this.props.when)
+  }
+
+  addEvent(eventName) {
+    this.target.addEventListener(`touch${eventName}`, this.props.do)
+  }
+
+  removeEvent(eventName) {
+    this.target.removeEventListener(`touch${eventName}`, this.props.do)
   }
 
   render() {
@@ -25,7 +46,10 @@ Touch.propTypes = {
    * start, move, end or cancel
    * @type {String}
    */
-  when: PropTypes.string.isRequired,
+  when: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.array.isRequired
+  ]),
   /**
    * Triggered when the key is pressed
    * @type {Function}

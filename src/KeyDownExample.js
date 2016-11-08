@@ -74,7 +74,7 @@ export default class KeyDownExample extends Component {
 
         <div>Global Touch {this.state.touchType}</div>
 
-        <Touch when="move" do={this.handleTargetTouch}>
+        <Touch when={['start', 'move']} do={this.handleTargetTouch}>
           <div>Touch this text: {this.state.targetTouchType}</div>
         </Touch>
 >>>>>>> Attach touch event to children:src/Example.js
