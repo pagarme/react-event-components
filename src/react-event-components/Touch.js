@@ -15,7 +15,7 @@ class Touch extends Component {
 
 Touch.propTypes = {
   /**
-   * start, move or end
+   * start, move, end or cancel
    * @type {String}
    */
   when: PropTypes.string.isRequired,
