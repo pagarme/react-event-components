@@ -15,6 +15,12 @@ export default class KeyDownExample extends Component {
     this.setState(position)
   }
 
+  handleTouch = (event) => {
+    this.setState({
+      touchType: event.type
+    })
+  }
+
   render() {
     const {x, y, color} = this.state
     return (
