@@ -1,11 +1,5 @@
-<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
 import {KeyDown} from './react-event-components'
 import React, {Component} from 'react'
-=======
-import React, { Component } from 'react'
-import { KeyDown, Every } from './react-event-components'
-import { TouchExample } from './TouchExample'
->>>>>>> Improvements from PR review:src/Example.js
 
 export default class KeyDownExample extends Component {
   constructor() {
@@ -13,18 +7,7 @@ export default class KeyDownExample extends Component {
     this.state = {
       x: 0,
       y: 0,
-<<<<<<< 611f0521af5d0c5576f5d304930fda927eaf4f37:src/KeyDownExample.js
       color: 'rgb(0,0,0)'
-=======
-      totalTime: 0,
-<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
-      color: 'rgb(0,0,0)',
-      touchType: null,
-      targetTouchType: null
->>>>>>> Attach touch event to children:src/Example.js
-=======
-      color: 'rgb(0,0,0)'
->>>>>>> Improvements from PR review:src/Example.js
     }
   }
 
@@ -51,35 +34,6 @@ export default class KeyDownExample extends Component {
         <KeyDown when="e" do={() => this.move({ x: x + 10, y: y - 10})} />
         <KeyDown when="z" do={() => this.move({ x: x - 10, y: y + 10})} />
         <KeyDown when="c" do={() => this.move({ x: x + 10, y: y + 10})} />
-<<<<<<< 611f0521af5d0c5576f5d304930fda927eaf4f37:src/KeyDownExample.js
-=======
-
-        <Every frame do={ (dt) => {
-          this.setState({ totalTime: this.state.totalTime + dt })
-        }} />
-
-        <Every s="1" ms="500" do={() => {
-          const randomHex = () => Math.round(Math.random() * 255)
-          const randomColor = `rgb(${randomHex()},${randomHex()},${randomHex()})`
-          this.setState({
-            color: randomColor
-          })
-        }} />
-
-<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
-        <Touch when="start" do={this.handleTouch} />
-        <Touch when="move" do={this.handleTouch} />
-        <Touch when="end" do={this.handleTouch} />
-
-        <div>Global Touch {this.state.touchType}</div>
-
-        <Touch when={['start', 'move']} do={this.handleTargetTouch}>
-          <div>Touch this text: {this.state.targetTouchType}</div>
-        </Touch>
->>>>>>> Attach touch event to children:src/Example.js
-=======
-        <TouchExample />
->>>>>>> Improvements from PR review:src/Example.js
       </div>
     )
   }

@@ -11,7 +11,6 @@ module.exports = {
   KeyUp,
   KeyDown,
   Every,
-  Touch,
   TouchStart,
   TouchMove,
   TouchEnd,
