@@ -9,19 +9,25 @@ A live demo can be found at https://pagarme.github.io/react-event-components
 
 ## Install
 
-`yarn add react-event-components`
+```
+yarn add react-event-components
+```
+
 or
-`npm install react-event-components --save`
+
+```
+npm install react-event-components --save
+```
 
 ## Usage
 
-## KeyDown
+### Key Events
 
-The same is valid for KeyUp event
+Call the handler everytime a key event happen.
 
-```js
-import {KeyDown} from './react-event-components'
-import React, {Component} from 'react'
+```jsx
+import { KeyDown } from './react-event-components'
+import React, { Component } from 'react'
 
 export default class KeyDownExample extends Component {
   constructor() {
@@ -62,13 +68,13 @@ export default class KeyDownExample extends Component {
 }
 ```
 
-## Every
+### Timer Events
 
-It count the delta time of the life time of the program
+Runs a function recurrently. Passes the delta time to handler.
 
-```javascript
-import React, {Component} from 'react'
-import {Every} from './react-event-components'
+```jsx
+import React, { Component } from 'react'
+import { Every } from './react-event-components'
 
 export default class EveryExample extends Component {
   constructor() {
@@ -97,7 +103,7 @@ export default class EveryExample extends Component {
   render() {
     return (
       <div>
-        <p style={{color: this.state.color}}>Total time: {this.state.displayTime}</p>
+        <p style={{ color: this.state.color }}>Total time: { this.state.displayTime }</p>
 
         <Every frame do={(dt) => this.handleTotalTime(dt)} />
         <Every s="1" ms="500" do={() => this.handleColor()} />
@@ -105,8 +111,6 @@ export default class EveryExample extends Component {
     )
   }
 }
-
-```
 
 ```
 
