@@ -10,16 +10,14 @@ export default class TouchExample extends Component {
       start: false,
       move: false,
       end: false,
-      cancel: false,
-      touchEnd: []
+      cancel: false
     }
   }
 
   handleTouch = (event) => {
     this.setState({
       type: event.type,
-      touches: Array.from(event.touches),
-      touchEnd: []
+      touches: Array.from(event.touches)
     })
 
     if (event.type !== 'touchend') { return }
