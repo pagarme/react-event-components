@@ -8,7 +8,6 @@ class KeyEvent extends Component {
 
   listen(event) {
     if (event.key === this.props.when) {
-      console.log(this.props.trigger)
       this.props.do()
     }
   }
