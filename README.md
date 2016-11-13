@@ -114,7 +114,7 @@ export default class EveryExample extends Component {
 
 ## DeviceOrientation
 
-Call do property every time it changes device orientation data
+Call do property every time device orientation changes
 
 ```js
 import React, {Component} from 'react'
