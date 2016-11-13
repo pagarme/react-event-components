@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { TouchStart, TouchMove, TouchEnd, TouchCancel } from './react-event-components'
 
-export class TouchExample extends Component {
+export default class TouchExample extends Component {
   constructor() {
     super()
     this.state = {
