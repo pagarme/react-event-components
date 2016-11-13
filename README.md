@@ -9,24 +9,26 @@ A live demo can be found at https://pagarme.github.io/react-event-components
 
 ## Install
 
-`yarn add react-event-components`  
-or  
+`yarn add react-event-components`
+or
 `npm install react-event-components --save`
 
 ## Usage
 
-```javascript
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { KeyDown, Every } from './react-event-components'
+## KeyDown
 
-class Example extends Component {
+The same is valid for KeyUp event
+
+```js
+import {KeyDown} from './react-event-components'
+import React, {Component} from 'react'
+
+export default class KeyDownExample extends Component {
   constructor() {
     super()
     this.state = {
       x: 0,
       y: 0,
-      totalTime: 0,
       color: 'rgb(0,0,0)'
     }
   }
@@ -36,15 +38,12 @@ class Example extends Component {
   }
 
   render() {
-    const { x, y } = this.state
-
+    const {x, y, color} = this.state
     return (
       <div>
-        <p>Total time: {Math.floor(this.state.totalTime * 100)/100}</p>
-
         <h1 style={{
           transform: `translate(${x}px, ${y}px)`,
-          color: this.state.color
+          color: color
         }}>
           Try WASD or QEZC
         </h1>
@@ -57,28 +56,58 @@ class Example extends Component {
         <KeyDown when="e" do={() => this.move({ x: x + 10, y: y - 10})} />
         <KeyDown when="z" do={() => this.move({ x: x - 10, y: y + 10})} />
         <KeyDown when="c" do={() => this.move({ x: x + 10, y: y + 10})} />
+      </div>
+    )
+  }
+}
+```
 
-        <Every frame do={ (dt) => {
-          this.setState({ totalTime: this.state.totalTime + dt })
-        }} />
+## Every
 
-        <Every s="1" ms="500" do={() => {
-          const randomHex = () => Math.round(Math.random() * 255)
-          const randomColor = `rgb(${randomHex()},${randomHex()},${randomHex()})`
-          this.setState({
-            color: randomColor
-          })
-        }} />
+It count the delta time of the life time of the program
 
+```javascript
+import React, {Component} from 'react'
+import {Every} from './react-event-components'
+
+export default class EveryExample extends Component {
+  constructor() {
+    super()
+    this.state = {
+      totalTime: 0,
+      color: 'rgb(0,0,0)'
+    }
+  }
+
+  handleTotalTime(dt) {
+    const totalTime = this.state.totalTime + dt
+    this.setState({
+      totalTime: totalTime,
+      displayTime: Math.floor(totalTime * 100)/100
+    })
+  }
+
+  handleColor() {
+    const randomHex = () => Math.round(Math.random() * 255)
+    this.setState({
+      color: `rgb(${randomHex()},${randomHex()},${randomHex()})`
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <p style={{color: this.state.color}}>Total time: {this.state.displayTime}</p>
+
+        <Every frame do={(dt) => this.handleTotalTime(dt)} />
+        <Every s="1" ms="500" do={() => this.handleColor()} />
       </div>
     )
   }
 }
 
-ReactDOM.render(
-  <Example />,
-  document.getElementById('root')
-)
+```
+
 ```
 
 # LICENSE
@@ -107,4 +136,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-

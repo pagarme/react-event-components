@@ -1,8 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Example from './Example'
+import KeyDownExample from './KeyDownExample'
+import EveryExample from './EveryExample'
 
 ReactDOM.render(
-  <Example />,
+  <div>
+    <EveryExample />
+    <KeyDownExample />
+  </div>,
   document.getElementById('root')
 )
