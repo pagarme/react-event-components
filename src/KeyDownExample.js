@@ -1,5 +1,11 @@
+<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
 import {KeyDown} from './react-event-components'
 import React, {Component} from 'react'
+=======
+import React, { Component } from 'react'
+import { KeyDown, Every } from './react-event-components'
+import { TouchExample } from './TouchExample'
+>>>>>>> Improvements from PR review:src/Example.js
 
 export default class KeyDownExample extends Component {
   constructor() {
@@ -11,27 +17,19 @@ export default class KeyDownExample extends Component {
       color: 'rgb(0,0,0)'
 =======
       totalTime: 0,
+<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
       color: 'rgb(0,0,0)',
       touchType: null,
       targetTouchType: null
 >>>>>>> Attach touch event to children:src/Example.js
+=======
+      color: 'rgb(0,0,0)'
+>>>>>>> Improvements from PR review:src/Example.js
     }
   }
 
   move(position) {
     this.setState(position)
-  }
-
-  handleTouch = (event) => {
-    this.setState({
-      touchType: event.type
-    })
-  }
-
-  handleTargetTouch = (event) => {
-    this.setState({
-      targetTouchType: event.type
-    })
   }
 
   render() {
@@ -68,6 +66,7 @@ export default class KeyDownExample extends Component {
           })
         }} />
 
+<<<<<<< b5bb3c041da1bc844c0b9ba64c7009b360d4605d:src/KeyDownExample.js
         <Touch when="start" do={this.handleTouch} />
         <Touch when="move" do={this.handleTouch} />
         <Touch when="end" do={this.handleTouch} />
@@ -78,6 +77,9 @@ export default class KeyDownExample extends Component {
           <div>Touch this text: {this.state.targetTouchType}</div>
         </Touch>
 >>>>>>> Attach touch event to children:src/Example.js
+=======
+        <TouchExample />
+>>>>>>> Improvements from PR review:src/Example.js
       </div>
     )
   }

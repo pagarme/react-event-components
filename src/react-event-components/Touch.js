@@ -1,4 +1,3 @@
-const React = require('react')
 const { Component, PropTypes } = require('react')
 
 class Touch extends Component {
@@ -6,9 +5,7 @@ class Touch extends Component {
     this.target = this.props.children ? this.refs.target : document
 
     if (Array.isArray(this.props.when)) {
-      this.props.when.forEach((when) => {
-        this.addEvent(when)
-      })
+      this.props.when.forEach(this.addEvent.bind(this))
 
       return
     }
@@ -18,9 +15,7 @@ class Touch extends Component {
 
   componentWillUnmount() {
     if (Array.isArray(this.props.when)) {
-      this.props.when.forEach((when) => {
-        this.removeEvent(when)
-      })
+      this.props.when.forEach(this.removeEvent.bind(this))
 
       return
     }
@@ -37,18 +32,20 @@ class Touch extends Component {
   }
 
   render() {
-    return this.props.children? <div ref="target">{this.props.children}</div> : null
+    return null
   }
 }
 
+const validEvents = ['start', 'move', 'end', 'cancel']
+
 Touch.propTypes = {
   /**
-   * start, move, end or cancel
+   * Touch event to trigger the callback
    * @type {String}
    */
   when: PropTypes.oneOfType([
-    PropTypes.string.isRequired,
-    PropTypes.array.isRequired
+    PropTypes.oneOf(validEvents).isRequired,
+    PropTypes.arrayOf(PropTypes.oneOf(validEvents)).isRequired
   ]),
   /**
    * Triggered when the key is pressed
