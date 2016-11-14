@@ -111,12 +111,13 @@ export default class EveryExample extends Component {
     )
   }
 }
+```
 
 ## DeviceOrientation
 
 Call do property every time device orientation changes
 
-```js
+```jsx
 import React, {Component} from 'react'
 import {DeviceOrientation} from './react-event-components'
 
@@ -159,6 +160,4 @@ export default class DeviceOrientationExample extends Component {
     )
   }
 }
-```
-
 ```
