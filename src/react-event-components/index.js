@@ -6,6 +6,7 @@ const TouchStart = require('./TouchStart')
 const TouchMove = require('./TouchMove')
 const TouchEnd = require('./TouchEnd')
 const TouchCancel = require('./TouchCancel')
+const GeolocationChange = require('./GeolocationChange')
 
 module.exports = {
   KeyUp,
@@ -15,5 +16,7 @@ module.exports = {
   TouchMove,
   TouchEnd,
   TouchCancel,
-  DeviceOrientation
+  DeviceOrientation,
+  GeolocationChange
 }
+
