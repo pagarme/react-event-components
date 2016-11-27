@@ -4,20 +4,20 @@
   "repository": "pagarme/react-event-components",
   "version": "0.1.6",
   "license": "MIT",
-  "main": "src/react-event-components/index.js",
+  "main": "dist/react-event-components.js",
   "devDependencies": {
     "gh-pages": "0.11.0",
-    "react-scripts": "0.7.0"
-  },
-  "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
+    "react-scripts": "0.7.0",
+    "webpack": "1.13.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "demo-build": "react-scripts build",
+    "demo-deploy": "npm run demo-build && gh-pages -d ./build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d ./build"
+    "build": "webpack --progress --colors",
+    "prepublish": "npm run build && git diff --quiet"
   }
 }
