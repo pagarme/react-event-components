@@ -1,4 +1,4 @@
-const { Component, PropTypes } = require('react')
+import { Component, PropTypes } from 'react'
 
 class Touch extends Component {
   componentDidMount() {
@@ -54,4 +54,4 @@ Touch.propTypes = {
   do: PropTypes.func.isRequired
 }
 
-module.exports = Touch
+export default Touch

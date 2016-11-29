@@ -1,4 +1,4 @@
-const { Component, PropTypes } = require('react')
+import { Component, PropTypes } from 'react'
 
 class DeviceOrientation extends Component {
   componentDidMount() {
@@ -22,4 +22,4 @@ DeviceOrientation.propTypes = {
   do: PropTypes.func.isRequired
 }
 
-module.exports = DeviceOrientation
+export default DeviceOrientation

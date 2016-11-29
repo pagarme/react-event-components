@@ -1,15 +1,15 @@
-const KeyUp = require('./KeyUp')
-const KeyDown = require('./KeyDown')
-const Every = require('./Every')
-const DeviceOrientation = require('./DeviceOrientation')
-const TouchStart = require('./TouchStart')
-const TouchMove = require('./TouchMove')
-const TouchEnd = require('./TouchEnd')
-const TouchCancel = require('./TouchCancel')
-const GeolocationChange = require('./GeolocationChange')
-const WindowResize = require('./WindowResize')
+import KeyUp from './KeyUp'
+import KeyDown from './KeyDown'
+import Every from './Every'
+import DeviceOrientation from './DeviceOrientation'
+import TouchStart from './TouchStart'
+import TouchMove from './TouchMove'
+import TouchEnd from './TouchEnd'
+import TouchCancel from './TouchCancel'
+import GeolocationChange from './GeolocationChange'
+import WindowResize from './WindowResize'
 
-module.exports = {
+export {
   KeyUp,
   KeyDown,
   Every,

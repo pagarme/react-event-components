@@ -1,4 +1,4 @@
-const { Component, PropTypes } = require('react')
+import { Component, PropTypes } from 'react'
 
 class KeyEvent extends Component {
   constructor(props) {
@@ -46,4 +46,4 @@ KeyEvent.propTypes = {
   do: PropTypes.func.isRequired
 }
 
-module.exports = KeyEvent
+export default KeyEvent

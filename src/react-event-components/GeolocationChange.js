@@ -1,4 +1,4 @@
-const { Component, PropTypes } = require('react')
+import { Component, PropTypes } from 'react'
 
 const geolocation = 'geolocation' in navigator ? navigator.geolocation : null
 
@@ -47,4 +47,4 @@ GeolocationChange.propTypes = {
   onError: PropTypes.func
 }
 
-module.exports = GeolocationChange
+export default GeolocationChange

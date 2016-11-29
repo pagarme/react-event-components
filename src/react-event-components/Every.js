@@ -1,6 +1,6 @@
-const { Component } = require('react')
+import { Component } from 'react'
 
-module.exports = class Every extends Component {
+class Every extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -45,3 +45,5 @@ module.exports = class Every extends Component {
     return null
   }
 }
+
+export default Every
