@@ -161,3 +161,38 @@ export default class DeviceOrientationExample extends Component {
   }
 }
 ```
+
+## WindowResize
+
+Triggered when the user resizes the window, it can be called when the user changes the orientation from protrait to landscape.
+
+```jsx
+import React, { Component } from 'react'
+import { WindowResize } from './react-event-components'
+
+export default class WindowResizeExample extends Component {
+  constructor() {
+    super()
+    this.state = {
+      innerWidth: window.innerWidth
+    }
+  }
+
+  handleWindowResize(window) {
+    this.setState(Object.assign(window, {
+      innerWidth: window.innerWidth,
+      innerWidth: window.innerWidth
+    }))
+  }
+
+  render() {
+    return (
+      <div>
+        <WindowResize do={this.handleWindowResize.bind(this)} />
+
+        <p>{this.state.innerWidth}px</p>
+      </div>
+    )
+  }
+}
+```

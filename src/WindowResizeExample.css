@@ -1,0 +1,7 @@
+.resize-example {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

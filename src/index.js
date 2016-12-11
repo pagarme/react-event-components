@@ -5,6 +5,7 @@ import EveryExample from './EveryExample'
 import DeviceOrientationExample from './DeviceOrientationExample'
 import TouchExample from './TouchExample'
 import GeolocationExample from './GeolocationExample'
+import WindowResizeExample from './WindowResizeExample'
 
 ReactDOM.render(
   <div>
@@ -13,6 +14,10 @@ ReactDOM.render(
     <DeviceOrientationExample />
     <TouchExample />
     <GeolocationExample />
+
+    <hr />
+
+    <WindowResizeExample />
   </div>,
   document.getElementById('root')
 )
