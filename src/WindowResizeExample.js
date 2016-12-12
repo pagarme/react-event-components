@@ -12,7 +12,7 @@ export default class WindowResizeExample extends Component {
   }
 
   handleWindowResize(window) {
-    this.setState(Object.assign(this.state, {
+    this.setState(Object.assign({}, this.state, {
       innerWidth: window.innerWidth,
       innerWidth: window.innerWidth
     }))
