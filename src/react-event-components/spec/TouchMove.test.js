@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import KeyDownExample from './KeyDownExample'
+import TouchMove from '../TouchMove'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<KeyDownExample />, div)
+  const handle = () => {}
+  ReactDOM.render(<TouchMove do={handle} />, div)
 })

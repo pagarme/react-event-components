@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import EveryExample from './EveryExample'
+import TouchEvent from '../TouchEvent'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<EveryExample />, div)
+  const handle = () => {}
+  ReactDOM.render(<TouchEvent do={handle} />, div)
 })

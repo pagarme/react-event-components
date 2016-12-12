@@ -1,0 +1,2 @@
+
+window.requestAnimationFrame = jest.fn()
