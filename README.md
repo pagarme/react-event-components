@@ -164,7 +164,7 @@ export default class DeviceOrientationExample extends Component {
 
 ## WindowResize
 
-Triggered when the user resizes the window, it can be called when the user changes the orientation from protrait to landscape.
+Triggered when the user resizes the window, it can be called when the user changes the orientation from portrait to landscape.
 
 ```jsx
 import React, { Component } from 'react'
