@@ -14,3 +14,6 @@ script:
   - npm test
   - npm run build
   - npm run demo-deploy
+
+os:
+  - osx
