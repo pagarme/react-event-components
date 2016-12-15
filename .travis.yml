@@ -3,7 +3,7 @@ node_js:
   - "7.2.1"
 
 cache:
-  directities:
+  directories:
     - "node_modules"
 
 before_script:
@@ -13,7 +13,3 @@ before_script:
 script:
   - npm test
   - npm run build
-  - npm run demo-deploy
-
-os:
-  - osx
