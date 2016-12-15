@@ -1,6 +1,5 @@
-const React = require('react')
-const { PropTypes } = React
-const KeyEvent = require('./KeyEvent')
+import React, { PropTypes } from 'react'
+import KeyEvent from './KeyEvent'
 
 const KeyDown = (props) => <KeyEvent trigger="keydown" {...props} />
 
@@ -17,4 +16,4 @@ KeyDown.propTypes = {
   do: PropTypes.func.isRequired
 }
 
-module.exports = KeyDown
+export default KeyDown
