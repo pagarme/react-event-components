@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import KeyDownExample from './KeyDownExample'
+import KeyDownExample from '../KeyDownExample'
 
 it('renders without crashing', () => {
-  const div = document.createElement('div'),
+  const div = document.createElement('div')
   ReactDOM.render(<KeyDownExample />, div)
 })

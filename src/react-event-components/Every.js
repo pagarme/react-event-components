@@ -6,14 +6,14 @@ module.exports = class Every extends Component {
     this.state = {
       intervalId: null,
       shouldTriggerNextFrame: true,
-      lastFrame: performance.now(),
+      lastFrame: Date.now(),
     }
     this.handleEveryFrame = this.handleEveryFrame.bind(this)
   }
 
   handleEveryFrame() {
     if (!this.state.shouldTriggerNextFrame) { return }
-    const now = performance.now()
+    const now = Date.now()
     const dt = now - this.state.lastFrame
     this.setState({ lastFrame: now })
     this.props.do(dt/1000)
