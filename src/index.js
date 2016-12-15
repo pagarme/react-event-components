@@ -1,12 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import KeyDownExample from './KeyDownExample'
 import EveryExample from './EveryExample'
 import DeviceOrientationExample from './DeviceOrientationExample'
 import TouchExample from './TouchExample'
 import GeolocationExample from './GeolocationExample'
 
-ReactDOM.render(
+render(
   <div>
     <EveryExample />
     <KeyDownExample />
