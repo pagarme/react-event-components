@@ -9,7 +9,7 @@ export default class DeviceOrientationExample extends Component {
     }
   }
 
-  handleDeviceOrientation = ({beta, gamma, alpha, absolute}) => {
+  handleDeviceOrientation({beta, gamma, alpha, absolute}) {
     this.setState({
       deviceOrientation: {
         beta,

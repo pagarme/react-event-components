@@ -36,7 +36,7 @@ class GeolocationChange extends Component {
 
 GeolocationChange.propTypes = {
   /**
-   * Triggered when the location change 
+   * Triggered when the location change
    * @type {Function}
    */
   do: PropTypes.func.isRequired,

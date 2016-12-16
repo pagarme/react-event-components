@@ -14,7 +14,7 @@ export default class TouchExample extends Component {
     }
   }
 
-  handleTouch = (event) => {
+  handleTouch(event) {
     this.setState({
       type: event.type,
       touches: Array.from(event.touches)
@@ -27,7 +27,7 @@ export default class TouchExample extends Component {
     })
   }
 
-  check = (event) => {
+  check(event) {
     this.setState({
       [event.target.value]: event.target.checked
     })
