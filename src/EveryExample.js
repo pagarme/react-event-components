@@ -8,6 +8,9 @@ export default class EveryExample extends Component {
       totalTime: 0,
       color: 'rgb(0,0,0)'
     }
+
+    this.handleTotalTime = this.handleTotalTime.bind(this)
+    this.handleColor = this.handleColor.bind(this)
   }
 
   handleTotalTime(dt) {
@@ -30,8 +33,8 @@ export default class EveryExample extends Component {
       <div>
         <p style={{color: this.state.color}}>Total time: {this.state.displayTime}</p>
 
-        <Every frame do={this.handleTotalTime.bind(this)} />
-        <Every s="1" ms="500" do={this.handleColor.bind(this)} />
+        <Every frame do={this.handleTotalTime} />
+        <Every s="1" ms="500" do={this.handleColor} />
       </div>
     )
   }
