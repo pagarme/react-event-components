@@ -47,27 +47,63 @@ module.exports =
 
 	'use strict';
 	
-	var KeyUp = __webpack_require__(8);
-	var KeyDown = __webpack_require__(7);
-	var Every = __webpack_require__(5);
-	var DeviceOrientation = __webpack_require__(4);
-	var TouchStart = __webpack_require__(12);
-	var TouchMove = __webpack_require__(11);
-	var TouchEnd = __webpack_require__(10);
-	var TouchCancel = __webpack_require__(9);
-	var GeolocationChange = __webpack_require__(6);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.WindowResize = exports.GeolocationChange = exports.DeviceOrientation = exports.TouchCancel = exports.TouchEnd = exports.TouchMove = exports.TouchStart = exports.Every = exports.KeyDown = exports.KeyUp = undefined;
 	
-	module.exports = {
-	  KeyUp: KeyUp,
-	  KeyDown: KeyDown,
-	  Every: Every,
-	  TouchStart: TouchStart,
-	  TouchMove: TouchMove,
-	  TouchEnd: TouchEnd,
-	  TouchCancel: TouchCancel,
-	  DeviceOrientation: DeviceOrientation,
-	  GeolocationChange: GeolocationChange
-	};
+	var _KeyUp = __webpack_require__(8);
+	
+	var _KeyUp2 = _interopRequireDefault(_KeyUp);
+	
+	var _KeyDown = __webpack_require__(7);
+	
+	var _KeyDown2 = _interopRequireDefault(_KeyDown);
+	
+	var _Every = __webpack_require__(5);
+	
+	var _Every2 = _interopRequireDefault(_Every);
+	
+	var _DeviceOrientation = __webpack_require__(4);
+	
+	var _DeviceOrientation2 = _interopRequireDefault(_DeviceOrientation);
+	
+	var _TouchStart = __webpack_require__(12);
+	
+	var _TouchStart2 = _interopRequireDefault(_TouchStart);
+	
+	var _TouchMove = __webpack_require__(11);
+	
+	var _TouchMove2 = _interopRequireDefault(_TouchMove);
+	
+	var _TouchEnd = __webpack_require__(10);
+	
+	var _TouchEnd2 = _interopRequireDefault(_TouchEnd);
+	
+	var _TouchCancel = __webpack_require__(9);
+	
+	var _TouchCancel2 = _interopRequireDefault(_TouchCancel);
+	
+	var _GeolocationChange = __webpack_require__(6);
+	
+	var _GeolocationChange2 = _interopRequireDefault(_GeolocationChange);
+	
+	var _WindowResize = __webpack_require__(13);
+	
+	var _WindowResize2 = _interopRequireDefault(_WindowResize);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.KeyUp = _KeyUp2.default;
+	exports.KeyDown = _KeyDown2.default;
+	exports.Every = _Every2.default;
+	exports.TouchStart = _TouchStart2.default;
+	exports.TouchMove = _TouchMove2.default;
+	exports.TouchEnd = _TouchEnd2.default;
+	exports.TouchCancel = _TouchCancel2.default;
+	exports.DeviceOrientation = _DeviceOrientation2.default;
+	exports.GeolocationChange = _GeolocationChange2.default;
+	exports.WindowResize = _WindowResize2.default;
 
 /***/ },
 /* 1 */
@@ -81,18 +117,19 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _require = __webpack_require__(1);
-	
-	var Component = _require.Component;
-	var PropTypes = _require.PropTypes;
 	
 	var Touch = function (_Component) {
 	  _inherits(Touch, _Component);
@@ -145,7 +182,7 @@ module.exports =
 	  }]);
 	
 	  return Touch;
-	}(Component);
+	}(_react.Component);
 	
 	var validEvents = ['start', 'move', 'end', 'cancel'];
 	
@@ -154,15 +191,15 @@ module.exports =
 	   * Touch event to trigger the callback
 	   * @type {String}
 	   */
-	  when: PropTypes.oneOfType([PropTypes.oneOf(validEvents).isRequired, PropTypes.arrayOf(PropTypes.oneOf(validEvents)).isRequired]),
+	  when: _react.PropTypes.oneOfType([_react.PropTypes.oneOf(validEvents).isRequired, _react.PropTypes.arrayOf(_react.PropTypes.oneOf(validEvents)).isRequired]),
 	  /**
 	   * Triggered when the key is pressed
 	   * @type {Function}
 	   */
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = Touch;
+	exports.default = Touch;
 
 /***/ },
 /* 3 */
@@ -170,18 +207,19 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _require = __webpack_require__(1);
-	
-	var Component = _require.Component;
-	var PropTypes = _require.PropTypes;
 	
 	var KeyEvent = function (_Component) {
 	  _inherits(KeyEvent, _Component);
@@ -225,26 +263,26 @@ module.exports =
 	  }]);
 	
 	  return KeyEvent;
-	}(Component);
+	}(_react.Component);
 	
 	KeyEvent.propTypes = {
 	  /**
 	   * A trigger to add listeners to
 	   */
-	  trigger: PropTypes.string.isRequired,
+	  trigger: _react.PropTypes.string.isRequired,
 	  /**
 	   * A keyboard key to trigger the callback
 	   * @type {String}
 	   */
-	  when: PropTypes.string.isRequired,
+	  when: _react.PropTypes.string.isRequired,
 	  /**
 	   * Triggered when the key is pressed
 	   * @type {Function}
 	   */
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = KeyEvent;
+	exports.default = KeyEvent;
 
 /***/ },
 /* 4 */
@@ -252,18 +290,19 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _require = __webpack_require__(1);
-	
-	var Component = _require.Component;
-	var PropTypes = _require.PropTypes;
 	
 	var DeviceOrientation = function (_Component) {
 	  _inherits(DeviceOrientation, _Component);
@@ -297,13 +336,13 @@ module.exports =
 	  }]);
 	
 	  return DeviceOrientation;
-	}(Component);
+	}(_react.Component);
 	
 	DeviceOrientation.propTypes = {
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = DeviceOrientation;
+	exports.default = DeviceOrientation;
 
 /***/ },
 /* 5 */
@@ -311,7 +350,13 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -319,12 +364,7 @@ module.exports =
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _require = __webpack_require__(1);
-	
-	var Component = _require.Component;
-	
-	
-	module.exports = function (_Component) {
+	var Every = function (_Component) {
 	  _inherits(Every, _Component);
 	
 	  function Every(props) {
@@ -335,7 +375,7 @@ module.exports =
 	    _this.state = {
 	      intervalId: null,
 	      shouldTriggerNextFrame: true,
-	      lastFrame: performance.now()
+	      lastFrame: Date.now()
 	    };
 	    _this.handleEveryFrame = _this.handleEveryFrame.bind(_this);
 	    return _this;
@@ -347,7 +387,7 @@ module.exports =
 	      if (!this.state.shouldTriggerNextFrame) {
 	        return;
 	      }
-	      var now = performance.now();
+	      var now = Date.now();
 	      var dt = now - this.state.lastFrame;
 	      this.setState({ lastFrame: now });
 	      this.props.do(dt / 1000);
@@ -385,7 +425,9 @@ module.exports =
 	  }]);
 	
 	  return Every;
-	}(Component);
+	}(_react.Component);
+	
+	exports.default = Every;
 
 /***/ },
 /* 6 */
@@ -393,19 +435,19 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _require = __webpack_require__(1);
-	
-	var Component = _require.Component;
-	var PropTypes = _require.PropTypes;
-	
 	
 	var geolocation = 'geolocation' in navigator ? navigator.geolocation : null;
 	
@@ -453,22 +495,22 @@ module.exports =
 	  }]);
 	
 	  return GeolocationChange;
-	}(Component);
+	}(_react.Component);
 	
 	GeolocationChange.propTypes = {
 	  /**
 	   * Triggered when the location change 
 	   * @type {Function}
 	   */
-	  do: PropTypes.func.isRequired,
+	  do: _react.PropTypes.func.isRequired,
 	  /**
 	   * Triggered when location error occurs
 	   * @type {Function}
 	   */
-	  onError: PropTypes.func
+	  onError: _react.PropTypes.func
 	};
 	
-	module.exports = GeolocationChange;
+	exports.default = GeolocationChange;
 
 /***/ },
 /* 7 */
@@ -476,15 +518,24 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var KeyEvent = __webpack_require__(3);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _KeyEvent = __webpack_require__(3);
+	
+	var _KeyEvent2 = _interopRequireDefault(_KeyEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var KeyDown = function KeyDown(props) {
-	  return React.createElement(KeyEvent, _extends({ trigger: 'keydown' }, props));
+	  return _react2.default.createElement(_KeyEvent2.default, _extends({ trigger: 'keydown' }, props));
 	};
 	
 	KeyDown.propTypes = {
@@ -492,15 +543,15 @@ module.exports =
 	   * A keyboard key to trigger the callback
 	   * @type {String}
 	   */
-	  when: PropTypes.string.isRequired,
+	  when: _react.PropTypes.string.isRequired,
 	  /**
 	   * Triggered when the key is pressed
 	   * @type {Function}
 	   */
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = KeyDown;
+	exports.default = KeyDown;
 
 /***/ },
 /* 8 */
@@ -508,15 +559,24 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var KeyEvent = __webpack_require__(3);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _KeyEvent = __webpack_require__(3);
+	
+	var _KeyEvent2 = _interopRequireDefault(_KeyEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var KeyUp = function KeyUp(props) {
-	  return React.createElement(KeyEvent, _extends({ trigger: 'keyup' }, props));
+	  return _react2.default.createElement(_KeyEvent2.default, _extends({ trigger: 'keyup' }, props));
 	};
 	
 	KeyUp.propTypes = {
@@ -524,15 +584,15 @@ module.exports =
 	   * A keyboard key to trigger the callback
 	   * @type {String}
 	   */
-	  when: PropTypes.string.isRequired,
+	  when: _react.PropTypes.string.isRequired,
 	  /**
 	   * Triggered when the key is pressed
 	   * @type {Function}
 	   */
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = KeyUp;
+	exports.default = KeyUp;
 
 /***/ },
 /* 9 */
@@ -540,22 +600,31 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var TouchEvent = __webpack_require__(2);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TouchEvent = __webpack_require__(2);
+	
+	var _TouchEvent2 = _interopRequireDefault(_TouchEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var TouchCancel = function TouchCancel(props) {
-	  return React.createElement(TouchEvent, _extends({ when: 'cancel' }, props));
+	  return _react2.default.createElement(_TouchEvent2.default, _extends({ when: 'cancel' }, props));
 	};
 	
 	TouchCancel.propTypes = {
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = TouchCancel;
+	exports.default = TouchCancel;
 
 /***/ },
 /* 10 */
@@ -563,22 +632,31 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var TouchEvent = __webpack_require__(2);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TouchEvent = __webpack_require__(2);
+	
+	var _TouchEvent2 = _interopRequireDefault(_TouchEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var TouchEnd = function TouchEnd(props) {
-	  return React.createElement(TouchEvent, _extends({ when: 'end' }, props));
+	  return _react2.default.createElement(_TouchEvent2.default, _extends({ when: 'end' }, props));
 	};
 	
 	TouchEnd.propTypes = {
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = TouchEnd;
+	exports.default = TouchEnd;
 
 /***/ },
 /* 11 */
@@ -586,22 +664,31 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var TouchEvent = __webpack_require__(2);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TouchEvent = __webpack_require__(2);
+	
+	var _TouchEvent2 = _interopRequireDefault(_TouchEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var TouchMove = function TouchMove(props) {
-	  return React.createElement(TouchEvent, _extends({ when: 'move' }, props));
+	  return _react2.default.createElement(_TouchEvent2.default, _extends({ when: 'move' }, props));
 	};
 	
 	TouchMove.propTypes = {
-	  do: PropTypes.func.isRequired
+	  do: _react.PropTypes.func.isRequired
 	};
 	
-	module.exports = TouchMove;
+	exports.default = TouchMove;
 
 /***/ },
 /* 12 */
@@ -609,22 +696,94 @@ module.exports =
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var React = __webpack_require__(1);
-	var PropTypes = React.PropTypes;
+	var _react = __webpack_require__(1);
 	
-	var TouchEvent = __webpack_require__(2);
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TouchEvent = __webpack_require__(2);
+	
+	var _TouchEvent2 = _interopRequireDefault(_TouchEvent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var TouchStart = function TouchStart(props) {
-	  return React.createElement(TouchEvent, _extends({ when: 'start' }, props));
+	  return _react2.default.createElement(_TouchEvent2.default, _extends({ when: 'start' }, props));
 	};
 	
 	TouchStart.propTypes = {
+	  do: _react.PropTypes.func.isRequired
+	};
+	
+	exports.default = TouchStart;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _require = __webpack_require__(1);
+	
+	var Component = _require.Component;
+	var PropTypes = _require.PropTypes;
+	
+	var WindowResize = function (_Component) {
+	  _inherits(WindowResize, _Component);
+	
+	  function WindowResize() {
+	    _classCallCheck(this, WindowResize);
+	
+	    return _possibleConstructorReturn(this, (WindowResize.__proto__ || Object.getPrototypeOf(WindowResize)).apply(this, arguments));
+	  }
+	
+	  _createClass(WindowResize, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+	
+	      window.addEventListener('resize', function (event) {
+	        return _this2.props.do(event.target);
+	      });
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('resize');
+	    }
+	  }, {
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate() {
+	      return false;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return null;
+	    }
+	  }]);
+	
+	  return WindowResize;
+	}(Component);
+	
+	WindowResize.propTypes = {
 	  do: PropTypes.func.isRequired
 	};
 	
-	module.exports = TouchStart;
+	module.exports = WindowResize;
 
 /***/ }
 /******/ ]);

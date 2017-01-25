@@ -19,5 +19,8 @@
     "test": "react-scripts test --env=jsdom",
     "build": "webpack --progress --colors",
     "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "recharts": "0.20.5"
   }
 }
