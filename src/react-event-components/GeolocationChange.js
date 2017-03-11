@@ -1,13 +1,14 @@
-import { Component, PropTypes } from 'react'
+import { PropTypes } from 'react'
+import Base from './Base'
 
 const geolocation = 'geolocation' in navigator ? navigator.geolocation : null
 
-class GeolocationChange extends Component {
+class GeolocationChange extends Base {
   componentDidMount() {
     if (geolocation) {
       const watchId = geolocation.watchPosition(
         this.props.do,
-        this.handleError.bind(this)
+        this.handleError
       )
       this.setState({ watchId })
     }
@@ -19,24 +20,16 @@ class GeolocationChange extends Component {
     }
   }
 
-  handleError (error) {
+  handleError = error => {
     if (typeof this.props.onError === 'function') {
       this.props.onError(error)
     }
-  }
-
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    return null
   }
 }
 
 GeolocationChange.propTypes = {
   /**
-   * Triggered when the location change 
+   * Triggered when the location change
    * @type {Function}
    */
   do: PropTypes.func.isRequired,

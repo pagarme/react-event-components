@@ -1,23 +1,10 @@
-import KeyUp from './KeyUp'
-import KeyDown from './KeyDown'
-import Every from './Every'
-import DeviceOrientation from './DeviceOrientation'
-import TouchStart from './TouchStart'
-import TouchMove from './TouchMove'
-import TouchEnd from './TouchEnd'
-import TouchCancel from './TouchCancel'
-import GeolocationChange from './GeolocationChange'
-import WindowResize from './WindowResize'
-
-export {
-  KeyUp,
-  KeyDown,
-  Every,
-  TouchStart,
-  TouchMove,
-  TouchEnd,
-  TouchCancel,
-  DeviceOrientation,
-  GeolocationChange,
-  WindowResize
-}
+export { default as KeyUp } from './KeyUp'
+export { default as KeyDown } from './KeyDown'
+export { default as Every } from './Every'
+export { default as DeviceOrientation } from './DeviceOrientation'
+export { default as TouchStart } from './TouchStart'
+export { default as TouchMove } from './TouchMove'
+export { default as TouchEnd } from './TouchEnd'
+export { default as TouchCancel } from './TouchCancel'
+export { default as GeolocationChange } from './GeolocationChange'
+export { default as WindowResize } from './WindowResize'

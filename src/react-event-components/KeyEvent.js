@@ -1,31 +1,16 @@
-import { Component, PropTypes } from 'react'
+import { PropTypes } from 'react'
+import Base from './Base';
 
-class KeyEvent extends Component {
+class KeyEvent extends Base {
   constructor(props) {
     super(props)
-    this.listen = this.listen.bind(this)
+    this.registerEvent(this.props.trigger, this.listen, document)
   }
 
-  listen(event) {
+  listen = event =>{
     if (event.key === this.props.when) {
       this.props.do()
     }
-  }
-
-  componentDidMount() {
-    document.addEventListener(this.props.trigger, this.listen)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener(this.props.trigger, this.listen)
-  }
-
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    return null
   }
 }
 

@@ -1,20 +1,10 @@
-const { Component, PropTypes } = require('react')
+import { PropTypes } from 'react'
+import Base from './Base'
 
-class WindowResize extends Component {
-  componentDidMount() {
-    window.addEventListener('resize', (event) => this.props.do(event.target))
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize')
-  }
-
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    return null
+class WindowResize extends Base {
+  constructor(props) {
+    super(props)
+    this.registerEvent('resize', e => this.props.do(e.target))
   }
 }
 
@@ -22,4 +12,4 @@ WindowResize.propTypes = {
   do: PropTypes.func.isRequired
 }
 
-module.exports = WindowResize
+export default WindowResize
