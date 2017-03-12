@@ -1,23 +1,13 @@
-import { Component } from 'react'
+import Base from './Base'
 
-class Every extends Component {
+class Every extends Base {
   constructor(props) {
     super(props)
     this.state = {
       intervalId: null,
       shouldTriggerNextFrame: true,
-      lastFrame: Date.now(),
+      lastFrame: Date.now()
     }
-    this.handleEveryFrame = this.handleEveryFrame.bind(this)
-  }
-
-  handleEveryFrame() {
-    if (!this.state.shouldTriggerNextFrame) { return }
-    const now = Date.now()
-    const dt = now - this.state.lastFrame
-    this.setState({ lastFrame: now })
-    this.props.do(dt/1000)
-    window.requestAnimationFrame(this.handleEveryFrame)
   }
 
   componentDidMount() {
@@ -26,23 +16,24 @@ class Every extends Component {
       return
     }
     const interval = ((Number(this.props.s) || 0) * 1000) + (Number(this.props.ms) || 0)
-    this.setState({ intervalId: window.setInterval(this.props.do, interval) })
+    this.setState({ ...this.state, intervalId: window.setInterval(this.props.do, interval) })
   }
 
   componentWillUnmount() {
     if (this.props.frame) {
-      this.setState({ shouldTriggerNextFrame: false })
+      this.setState({ ...this.state, shouldTriggerNextFrame: false })
       return
     }
     window.clearInterval(this.state.intervalId)
   }
 
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    return null
+  handleEveryFrame = () => {
+    if (!this.state.shouldTriggerNextFrame) { return }
+    const now = Date.now()
+    const dt = now - this.state.lastFrame
+    this.setState({ ...this.state, lastFrame: now })
+    this.props.do(dt / 1000)
+    window.requestAnimationFrame(this.handleEveryFrame)
   }
 }
 

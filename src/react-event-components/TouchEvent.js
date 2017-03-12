@@ -3,31 +3,29 @@ import { Component, PropTypes } from 'react'
 class Touch extends Component {
   componentDidMount() {
     this.target = this.props.children ? this.refs.target : document
-
-    if (Array.isArray(this.props.when)) {
-      this.props.when.forEach(this.addEvent.bind(this))
-
-      return
-    }
-
-    this.addEvent(this.props.when)
+    this.registerEvent('add')
   }
 
   componentWillUnmount() {
+    this.registerEvent('remove')
+  }
+
+  registerEvent = type => {
+    const action = this[`${type}Event`]
     if (Array.isArray(this.props.when)) {
-      this.props.when.forEach(this.removeEvent.bind(this))
+      this.props.when.forEach(action)
 
       return
     }
 
-    this.removeEvent(this.props.when)
+    action(this.props.when)
   }
 
-  addEvent(eventName) {
+  addEvent = eventName => {
     this.target.addEventListener(`touch${eventName}`, this.props.do)
   }
 
-  removeEvent(eventName) {
+  removeEvent = eventName => {
     this.target.removeEventListener(`touch${eventName}`, this.props.do)
   }
 

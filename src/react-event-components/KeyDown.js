@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import KeyEvent from './KeyEvent'
 
-const KeyDown = (props) => <KeyEvent trigger="keydown" {...props} />
+const KeyDown = props => <KeyEvent trigger="keydown" {...props} />
 
 KeyDown.propTypes = {
   /**
