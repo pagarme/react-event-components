@@ -1,4 +1,5 @@
-import { Component, PropTypes } from 'react'
+import { Component } from 'react'
+import { func, oneOfType, arrayOf, oneOf } from 'prop-types'
 
 class Touch extends Component {
   componentDidMount() {
@@ -43,15 +44,15 @@ Touch.propTypes = {
    * Touch event to trigger the callback
    * @type {String}
    */
-  when: PropTypes.oneOfType([
-    PropTypes.oneOf(validEvents).isRequired,
-    PropTypes.arrayOf(PropTypes.oneOf(validEvents)).isRequired
+  when: oneOfType([
+    oneOf(validEvents).isRequired,
+    arrayOf(oneOf(validEvents)).isRequired
   ]),
   /**
    * Triggered when the key is pressed
    * @type {Function}
    */
-  do: PropTypes.func.isRequired
+  do: func.isRequired
 }
 
 export default Touch

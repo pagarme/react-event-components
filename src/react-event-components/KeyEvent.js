@@ -1,4 +1,5 @@
-import { Component, PropTypes } from 'react'
+import { Component } from 'react'
+import { func, string } from 'prop-types'
 
 class KeyEvent extends Component {
   constructor(props) {
@@ -33,17 +34,17 @@ KeyEvent.propTypes = {
   /**
    * A trigger to add listeners to
    */
-  trigger: PropTypes.string.isRequired,
+  trigger: string.isRequired,
   /**
    * A keyboard key to trigger the callback
    * @type {String}
    */
-  when: PropTypes.string.isRequired,
+  when: string.isRequired,
   /**
    * Triggered when the key is pressed
    * @type {Function}
    */
-  do: PropTypes.func.isRequired
+  do: func.isRequired
 }
 
 export default KeyEvent

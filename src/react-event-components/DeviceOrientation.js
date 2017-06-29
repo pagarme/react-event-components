@@ -1,4 +1,5 @@
-import { Component, PropTypes } from 'react'
+import { Component } from 'react'
+import { func } from 'prop-types'
 
 class DeviceOrientation extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class DeviceOrientation extends Component {
 }
 
 DeviceOrientation.propTypes = {
-  do: PropTypes.func.isRequired
+  do: func.isRequired
 }
 
 export default DeviceOrientation

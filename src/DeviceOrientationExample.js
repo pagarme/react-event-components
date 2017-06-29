@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {DeviceOrientation} from './react-event-components'
+import React, { Component } from 'react'
+import { DeviceOrientation } from './react-event-components'
 
 export default class DeviceOrientationExample extends Component {
   constructor() {

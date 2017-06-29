@@ -174,13 +174,13 @@ export default class WindowResizeExample extends Component {
   constructor() {
     super()
     this.state = {
+      title: 'Resize Your Window',
       innerWidth: window.innerWidth
     }
   }
 
   handleWindowResize(window) {
-    this.setState(Object.assign(window, {
-      innerWidth: window.innerWidth,
+    this.setState(Object.assign({}, this.state, {
       innerWidth: window.innerWidth
     }))
   }
@@ -190,9 +190,50 @@ export default class WindowResizeExample extends Component {
       <div>
         <WindowResize do={this.handleWindowResize.bind(this)} />
 
-        <p>{this.state.innerWidth}px</p>
+        <p>{this.state.title} {this.state.innerWidth}px</p>
       </div>
     )
   }
 }
+```
+
+## Battery Status
+
+It will give you the battery status of the user API, if it is available
+
+```jsx
+import { BatteryStatus } from './react-event-components'
+import React, { Component } from 'react'
+
+export default class BatteryStatusExample extends Component {
+  constructor() {
+    super()
+    this.state = { }
+  }
+
+  render() {
+    const {
+      charging,
+      chargingTime,
+      dischargingTime,
+      level
+    } = this.state
+
+    return (
+      <section>
+        <BatteryStatus do={this.handleBatteryChange.bind(this)} />
+
+        <h2>BatteryStatus</h2>
+        <div>charging: {charging}</div>
+        <div>chargingTime: {chargingTime}</div>
+        <div>level: {level}%</div>
+      </section>
+    )
+  }
+
+  handleBatteryChange (battery) {
+    this.setState({ ...battery })
+  }
+}
+
 ```

@@ -1,4 +1,5 @@
-const { Component, PropTypes } = require('react')
+import { Component } from 'react'
+import { func } from 'prop-types'
 
 class WindowResize extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class WindowResize extends Component {
 }
 
 WindowResize.propTypes = {
-  do: PropTypes.func.isRequired
+  do: func.isRequired
 }
 
-module.exports = WindowResize
+export default WindowResize

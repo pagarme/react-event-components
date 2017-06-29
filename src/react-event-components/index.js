@@ -8,6 +8,7 @@ import TouchEnd from './TouchEnd'
 import TouchCancel from './TouchCancel'
 import GeolocationChange from './GeolocationChange'
 import WindowResize from './WindowResize'
+import BatteryStatus from './BatteryStatus'
 
 export {
   KeyUp,
@@ -19,5 +20,6 @@ export {
   TouchCancel,
   DeviceOrientation,
   GeolocationChange,
-  WindowResize
+  WindowResize,
+  BatteryStatus
 }

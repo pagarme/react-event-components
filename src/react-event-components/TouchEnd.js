@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import { func } from 'prop-types'
 import TouchEvent from './TouchEvent'
 
 const TouchEnd = (props) => <TouchEvent when="end" {...props} />
 
 TouchEnd.propTypes = {
-  do: PropTypes.func.isRequired
+  do: func.isRequired
 }
 
 export default TouchEnd

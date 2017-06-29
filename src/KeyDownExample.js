@@ -1,5 +1,5 @@
-import {KeyDown} from './react-event-components'
-import React, {Component} from 'react'
+import { KeyDown } from './react-event-components'
+import React, { Component } from 'react'
 
 export default class KeyDownExample extends Component {
   constructor() {

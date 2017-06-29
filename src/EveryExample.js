@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Every} from './react-event-components'
+import React, { Component } from 'react'
+import { Every } from './react-event-components'
 
 export default class EveryExample extends Component {
   constructor() {
