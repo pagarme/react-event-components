@@ -6,9 +6,11 @@ import DeviceOrientationExample from './DeviceOrientationExample'
 import TouchExample from './TouchExample'
 import GeolocationExample from './GeolocationExample'
 import WindowResizeExample from './WindowResizeExample'
+import BatteryStatusExample from './BatteryStatusExample'
 
 render(
   <div>
+    <BatteryStatusExample />
     <EveryExample />
     <KeyDownExample />
     <DeviceOrientationExample />
