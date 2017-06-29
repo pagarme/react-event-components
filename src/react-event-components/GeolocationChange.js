@@ -1,4 +1,5 @@
-import { Component, PropTypes } from 'react'
+import { Component } from 'react'
+import { func } from 'prop-types'
 
 const geolocation = 'geolocation' in navigator ? navigator.geolocation : null
 
@@ -36,15 +37,15 @@ class GeolocationChange extends Component {
 
 GeolocationChange.propTypes = {
   /**
-   * Triggered when the location change 
+   * Triggered when the location change
    * @type {Function}
    */
-  do: PropTypes.func.isRequired,
+  do: func.isRequired,
   /**
    * Triggered when location error occurs
    * @type {Function}
    */
-  onError: PropTypes.func
+  onError: func
 }
 
 export default GeolocationChange

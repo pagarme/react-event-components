@@ -1,5 +1,5 @@
-import {GeolocationChange} from './react-event-components'
-import React, {Component} from 'react'
+import { GeolocationChange } from './react-event-components'
+import React, { Component } from 'react'
 
 export default class GeolocationChangeExample extends Component {
   state = {}

@@ -174,13 +174,13 @@ export default class WindowResizeExample extends Component {
   constructor() {
     super()
     this.state = {
+      title: 'Resize Your Window',
       innerWidth: window.innerWidth
     }
   }
 
   handleWindowResize(window) {
-    this.setState(Object.assign(window, {
-      innerWidth: window.innerWidth,
+    this.setState(Object.assign({}, this.state, {
       innerWidth: window.innerWidth
     }))
   }
@@ -190,7 +190,7 @@ export default class WindowResizeExample extends Component {
       <div>
         <WindowResize do={this.handleWindowResize.bind(this)} />
 
-        <p>{this.state.innerWidth}px</p>
+        <p>{this.state.title} {this.state.innerWidth}px</p>
       </div>
     )
   }

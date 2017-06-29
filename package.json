@@ -10,6 +10,7 @@
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-scripts": "1.0.8",
+    "prop-types": "15.5.10",
     "webpack": "3.0.0"
   },
   "scripts": {
