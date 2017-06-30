@@ -4,21 +4,24 @@ import { func, string } from 'prop-types'
 class KeyEvent extends Component {
   constructor(props) {
     super(props)
-    this.listen = this.listen.bind(this)
+    this.handleTrigger = this.handleTrigger.bind(this)
   }
 
-  listen(event) {
-    if (event.key === this.props.when) {
+  handleTrigger(event) {
+    if (this.props.when === event.key) {
       this.props.do()
+    }
+    if (this.props.when === '*' || !this.props.when) {
+      this.props.do(event.key)
     }
   }
 
   componentDidMount() {
-    document.addEventListener(this.props.trigger, this.listen)
+    document.addEventListener(this.props.trigger, this.handleTrigger)
   }
 
   componentWillUnmount() {
-    document.removeEventListener(this.props.trigger, this.listen)
+    document.removeEventListener(this.props.trigger, this.handleTrigger)
   }
 
   shouldComponentUpdate() {
@@ -39,7 +42,7 @@ KeyEvent.propTypes = {
    * A keyboard key to trigger the callback
    * @type {String}
    */
-  when: string.isRequired,
+  when: string,
   /**
    * Triggered when the key is pressed
    * @type {Function}
