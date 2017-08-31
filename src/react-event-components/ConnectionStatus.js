@@ -8,7 +8,7 @@ class ConnectionStatus extends Component {
   }
 
   handleTrigger(event) {
-    const status = navigator.onLine ? "online" : "offline"
+    const status = navigator.onLine ? 'online' : 'offline'
 
     if (this.props.when === status) {
       this.props.do()
