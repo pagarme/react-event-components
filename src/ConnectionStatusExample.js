@@ -5,26 +5,24 @@ export default class ConnectionStatusExample extends Component {
   constructor() {
     super()
     this.state = {
-      statusConnection: 'online'
+      status: 'online'
     }
   }
 
   handleOnline = () => {
     this.setState({
-      statusConnection: 'online'
+      status: 'online'
     })
   }
 
   handleOffline = () => {
     this.setState({
-      statusConnection: 'offline'
+      status: 'offline'
     })
   }
 
   handleConnection = (status) => {
-    this.setState({
-      statusConnection: status
-    })
+    this.setState({ status })
   }
 
   render() {
@@ -34,7 +32,7 @@ export default class ConnectionStatusExample extends Component {
         <ConnectionStatus when="online" do={this.handleOnline}/>
         <ConnectionStatus when="offline" do={this.handleOffline}/>
         <ConnectionStatus when='*' do={this.handleConnection}/>
-        <p>You are {this.state.statusConnection}</p>
+        <p>You are {this.state.status}</p>
       </div>
     )
   }
