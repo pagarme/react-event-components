@@ -10,21 +10,21 @@ export default class ConnectionStatusExample extends Component {
   }
 
   handleOnline = () => {
-    this.setState(Object.assign({}, this.state, {
+    this.setState({
       statusConnection: 'online'
-    }))
+    })
   }
 
   handleOffline = () => {
-    this.setState(Object.assign({}, this.state, {
+    this.setState({
       statusConnection: 'offline'
-    }))
+    })
   }
 
   handleConnection = (status) => {
-    this.setState(Object.assign({}, this.state, {
+    this.setState({
       statusConnection: status
-    }))
+    })
   }
 
   render() {
