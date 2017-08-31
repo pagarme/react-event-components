@@ -1,5 +1,7 @@
 # React Event Components
 
+[![Join the chat at https://gitter.im/pagarme/react-event-components](https://badges.gitter.im/pagarme/react-event-components.svg)](https://gitter.im/pagarme/react-event-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A set of components designed as an idiomatic way of working
 with global, raw input (keyboard, mouse, touch, etc) in React.
 
