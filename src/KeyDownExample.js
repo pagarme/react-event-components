@@ -31,7 +31,7 @@ export default class KeyDownExample extends Component {
           Try WASD or QEZC
         </h1>
 
-        <KeyDown do={(key) => this.setState({ lastKeyPressed: key })} />
+        <KeyDown when="*" do={(key) => this.setState({ lastKeyPressed: key })} />
         <KeyDown when="w" do={() => this.move({ y: y - 10 })} />
         <KeyDown when="a" do={() => this.move({ x: x - 10 })} />
         <KeyDown when="s" do={() => this.move({ y: y + 10 })} />
