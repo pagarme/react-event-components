@@ -8,11 +8,11 @@
   "devDependencies": {
     "gh-pages": "1.0.0",
     "html-webpack-plugin": "2.30.1",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "react-scripts": "1.0.8",
-    "prop-types": "15.5.10",
-    "webpack": "3.0.0"
+    "prop-types": "15.6.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-scripts": "1.0.14",
+    "webpack": "3.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
