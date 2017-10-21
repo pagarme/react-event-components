@@ -245,3 +245,45 @@ export default class BatteryStatusExample extends Component {
 }
 
 ```
+
+## Check if the internet connection is up
+
+Triggered when the browser switches between online and offline mode.
+
+```jsx
+export default class ConnectionStatusExample extends Component {
+  constructor() {
+    super()
+    this.state = {
+      status: 'online'
+    }
+  }
+
+  handleOnline = () => {
+    this.setState({
+      status: 'online'
+    })
+  }
+
+  handleOffline = () => {
+    this.setState({
+      status: 'offline'
+    })
+  }
+
+  handleConnection = (status) => {
+    this.setState({ status })
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Connection Status</h2>
+        <ConnectionStatus when="online" do={this.handleOnline}/>
+        <ConnectionStatus when="offline" do={this.handleOffline}/>
+        <ConnectionStatus when='*' do={this.handleConnection}/>
+        <p>You are {this.state.status}</p>
+      </div>
+    )
+  }
+```
