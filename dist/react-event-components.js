@@ -75,12 +75,10 @@ module.exports = require("react");
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 if (false) {
@@ -118,7 +116,7 @@ if (false) {
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Touch=function(_Component){_inherits(Touch,_Component);function Touch(){_classCallCheck(this,Touch);return _possibleConstructorReturn(this,(Touch.__proto__||Object.getPrototypeOf(Touch)).apply(this,arguments));}_createClass(Touch,[{key:'componentDidMount',value:function componentDidMount(){this.target=this.props.children?this.refs.target:document;if(Array.isArray(this.props.when)){this.props.when.forEach(this.addEvent.bind(this));return;}this.addEvent(this.props.when);}},{key:'componentWillUnmount',value:function componentWillUnmount(){if(Array.isArray(this.props.when)){this.props.when.forEach(this.removeEvent.bind(this));return;}this.removeEvent(this.props.when);}},{key:'addEvent',value:function addEvent(eventName){this.target.addEventListener('touch'+eventName,this.props.do);}},{key:'removeEvent',value:function removeEvent(eventName){this.target.removeEventListener('touch'+eventName,this.props.do);}},{key:'render',value:function render(){return null;}}]);return Touch;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);var validEvents=['start','move','end','cancel'];Touch.propTypes={/**
    * Touch event to trigger the callback
    * @type {String}
-   */when:__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOfType"]([__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOf"](validEvents).isRequired,__WEBPACK_IMPORTED_MODULE_1_prop_types__["arrayOf"](__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOf"](validEvents)).isRequired]),/**
+   */when:Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOfType"])([Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOf"])(validEvents).isRequired,Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["arrayOf"])(Object(__WEBPACK_IMPORTED_MODULE_1_prop_types__["oneOf"])(validEvents)).isRequired]),/**
    * Triggered when the key is pressed
    * @type {Function}
    */do:__WEBPACK_IMPORTED_MODULE_1_prop_types__["func"].isRequired};/* harmony default export */ __webpack_exports__["a"] = (Touch);
@@ -196,12 +194,10 @@ var KeyUp=function KeyUp(props){return __WEBPACK_IMPORTED_MODULE_0_react___defau
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
@@ -246,7 +242,8 @@ module.exports = function() {
     objectOf: getShim,
     oneOf: getShim,
     oneOfType: getShim,
-    shape: getShim
+    shape: getShim,
+    exact: getShim
   };
 
   ReactPropTypes.checkPropTypes = emptyFunction;
@@ -265,11 +262,9 @@ module.exports = function() {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -307,11 +302,9 @@ module.exports = emptyFunction;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -367,12 +360,10 @@ module.exports = invariant;
 
 "use strict";
 /**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 
