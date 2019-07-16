@@ -3,7 +3,7 @@ import { func } from 'prop-types'
 
 class WindowResize extends Component {
   componentDidMount() {
-    window.addEventListener('resize', (event) => this.props.do(event.target))
+    window.addEventListener('resize', (event) => this.props.do(event))
   }
 
   componentWillUnmount() {
