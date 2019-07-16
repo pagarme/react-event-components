@@ -9,10 +9,10 @@ class KeyEvent extends Component {
 
   handleTrigger(event) {
     if (this.props.when === event.key) {
-      this.props.do()
+      this.props.do(event)
     }
     if (this.props.when === '*' || !this.props.when) {
-      this.props.do(event.key)
+      this.props.do(event)
     }
   }
 
